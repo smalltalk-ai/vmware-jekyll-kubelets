@@ -31,6 +31,11 @@ footer_social_links:
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
+      type: "posts" 
+    values:
+      layout: "posts"
+  - scope:
+      path: "" # an empty string here means all files in the project
       type: "episodes" 
     values:
       layout: "episodes"

@@ -48,7 +48,7 @@ latest:
       </div>
     </div>
     <div class="row">
-      {% for episode in site.episodes %}
+      {% for episode in site.episodes limit:3 %}
         {% if episode.highlighted %}
           {% include episode-card.html %}
         {% endif %}
@@ -70,10 +70,8 @@ latest:
       </div>
     </div>
     <div class="row">
-      {% for episode in site.episodes %}
-        {% if episode.latest %}          
-          {% include episode-card.html %}
-        {% endif %}
+      {% for episode in site.episodes limit:3 %}
+        {% include episode-card.html %}
       {% endfor %}
     </div>
   </div>
