@@ -1,0 +1,11 @@
+<div class="col col-md-4">
+  <div class="card card-light mb-3 mb-md-0 shadow-sm">
+    <div class="card-body match-height">
+      <h5>
+        <a href="{{ episode.url }}">Episode {{ episode.episode_number }}: {{ episode.title }}</a>
+      </h5>
+      <p>{{ episode.description }}</p>
+      <iframe src="https://omny.fm/shows/{{ site.podcast }}/{{ episode.episode_id }}/embed" width="100%" title="{{ episode.title }}"></iframe>
+    </div>
+  </div>
+</div>
