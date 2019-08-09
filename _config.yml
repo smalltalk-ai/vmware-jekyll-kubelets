@@ -16,7 +16,7 @@ footer:
   cta_url: /docs/master
   cta_text: Documentation
   vm-link: http://vmware.github.io/
-
+podcast: the-kubelets
 footer_social_links:
   Twitter:
     fa_icon: fab fa-twitter
@@ -31,9 +31,9 @@ footer_social_links:
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
-      type: "posts" 
+      type: "episodes" 
     values:
-      layout: "posts"
+      layout: "episodes"
   - scope:
       path: ""
       type: "pages"
@@ -43,9 +43,9 @@ defaults:
   
 
 collections:
-  - contributors
-  - casestudies
-
+  episodes:
+    output: true
+  contributors:
 
 # Build settings
 permalink: :title/

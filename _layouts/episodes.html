@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body id="episodes">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      {% include site-header.html %}
+      <div class="post-single-hero bg-color-{{ site.hero.background-color }}"> 
+        <div class="section">
+          <div class="section-content">
+            <h1>{{ page.title }}</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container py-5">
+
+        <div class="row">
+          <div class="col mb-3"><h2>Video</h2></div>
+        </div>
+        <div class="row">
+          <div class="col mb-5">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="{{ page.video }}"></iframe>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col mb-3"><h2>Audio</h2></div>
+        </div>
+        <div class="row">
+          <div class="col mb-5">
+            <iframe src="https://omny.fm/shows/{{ site.podcast }}/{{ page.episode_id }}/embed?style=artwork" width="100%" height="180" title="{{ page.title }}"></iframe>
+          </div>
+        </div>
+        
+      </div>
+      <div class="post-single-body">
+        <div class="section section-card">
+          <div class="section-content pt-4 pb-0">
+            <div class="post-single-content">
+              <h2>Transcript:</h2>
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% include footer.html %}
+    </div>
+  </div>
+</body>
+
+</html>
