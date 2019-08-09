@@ -48,10 +48,9 @@ latest:
       </div>
     </div>
     <div class="row">
-      {% for episode in site.episodes limit:3 %}
-        {% if episode.highlighted %}
-          {% include episode-card.html %}
-        {% endif %}
+      {% assign highlighted = site.episodes | where:"highlighted", true  %}
+      {% for episode in highlighted limit:3 %}
+        {% include episode-card.html %}
       {% endfor %}
     </div>
   </div>
@@ -70,7 +69,8 @@ latest:
       </div>
     </div>
     <div class="row">
-      {% for episode in site.episodes limit:3 %}
+      {% assign latest = site.episodes | reverse %}
+      {% for episode in latest limit:3 %}
         {% include episode-card.html %}
       {% endfor %}
     </div>
