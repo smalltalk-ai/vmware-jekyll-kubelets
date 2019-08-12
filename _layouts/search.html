@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body id="search">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      {% include site-header.html %}
+      <div class="post-single-hero bg-color-{{ site.hero.background-color }}">
+        <div class="section">
+          <div class="section-content">
+            <h1>{{ page.title }}</h1>
+          </div>
+        </div>
+      </div>
+      <div class="post-single-body">
+        <div class="section section-card">
+          <div class="section-content pt-4 pb-0">
+            <div class="container">
+              <div class="row">
+                <div class="col text-center"><h2>Search Results For <em>Search Query</em></h2></div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="input-group mb-3">
+                    <label for="search" class="sr-only">Search</label>
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Search" name="search">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search fa-lg fa-fw mr-1"></i><span class="sr-only">Search</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <!-- Loop over Search Results; for now just use epsiode list -->
+                {% include episodes-list-listing.html %}
+                <!-- end Loop -->
+              </div>
+            </div
+          </div>
+        </div>
+      </div>
+      {% include footer.html %}
+    </div>
+  </div>
+</body>
+
+</html>
