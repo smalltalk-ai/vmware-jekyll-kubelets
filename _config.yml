@@ -44,13 +44,6 @@ defaults:
       type: "pages"
     values:
       layout: "default"
-  - scope:
-      path: ""
-      type: "search" 
-    values:
-      layout: "search"
- 
-  
 
 collections:
   episodes:
