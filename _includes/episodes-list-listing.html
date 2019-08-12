@@ -1,13 +1,5 @@
 <div class="row">
 {% for episode in site.episodes %}
-    {% include episode-listing.html %}
-        {% if limit > 0 and forloop.index >= limit %}
-         {% break %}
-        {% endif %}
-        {% assign row = forloop.index | modulo: 3 %}
-{% if row == 0 %}
-</div>
-<div class="row mt-4">
-{% endif %}
+  {% include episode-listing.html %}
 {% endfor %}
 </div>
