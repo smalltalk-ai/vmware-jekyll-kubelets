@@ -10,6 +10,8 @@
 
 // Layouts
 @import "./site/layouts/container";
+@import "./site/layouts/episode";
+@import "./site/layouts/about";
 
 // Objects
 @import "./site/objects/header";
@@ -17,6 +19,7 @@
 @import "./site/objects/section";
 @import "./site/objects/home-hero";
 @import "./site/objects/card";
+@import "./site/objects/collapse";
 @import "./site/objects/alternating-cards";
 @import "./site/objects/button";
 @import "./site/objects/thumbnail-grid";

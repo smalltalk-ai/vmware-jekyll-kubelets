@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Episodes
+title: All Episodes
 id: episodes
 ---
 <div class="post-single-hero bg-color-{{ site.hero.background-color }}">
@@ -10,10 +10,18 @@ id: episodes
     </div>
   </div>
 </div>
-<div class="post-single-body">
-  <div class="section section-card">
+  <div class="section">
     <div class="section-content pt-4 pb-0">
-      {% include episodes-list-cards.html %}
+      <div class="row">
+        <div class="col-md-8">
+          {% assign episodes = site.episodes | reverse %}
+          {% for episode in episodes %}
+            {% include episode-listing.html %}
+          {% endfor %}
+        </div>
+        <div class="col-md-4">
+          {% include listen-and-watch.html %}
+        </div>
+      </div>
     </div>
   </div>
-</div>

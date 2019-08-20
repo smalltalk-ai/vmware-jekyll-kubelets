@@ -48,9 +48,14 @@
       max-height: 90px;
     }
   }
-  h5 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
+}
+
+.episode-card {
+  strong {
+    font-size: 12px;
   }
+  .card-description {
+    height: 160px;
+    margin-bottom: 15px;
+  }  
 }

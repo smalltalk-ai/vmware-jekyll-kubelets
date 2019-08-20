@@ -1,5 +1,6 @@
 <div class="row">
-{% for episode in site.episodes %}
+{% assign episodes = site.episodes | reverse %}
+{% for episode in episodes %}
     {% include episode-card.html %}
         {% if limit > 0 and forloop.index >= limit %}
          {% break %}
