@@ -1,10 +1,18 @@
 <div class="col col-md-4">
-  <div class="card card-light mb-3 mb-md-0 shadow-sm">
+  <div class="card card-light mb-3 mb-md-0 shadow-sm episode-card">
     <div class="card-body match-height">
-      <h5>
-        <a href="{{ episode.url }}">Episode {{ episode.episode_number }}: {{ episode.title }}</a>
-      </h5>
-      <p>{{ episode.description }}</p>
+      <strong>Episode {{ episode.episode_number }}</strong>
+      <div class="card-description">
+        <h5>
+          <a href="{{ episode.url }}">{{ episode.title }}</a>
+        </h5>
+        <p>
+          {{ episode.description | truncate: 110 }}
+          {% if episode.description.size > 110 %}
+            <a href="{{ episode.url }}">See More</a>
+          {% endif %}
+        </p>
+      </div>
       <iframe src="https://omny.fm/shows/{{ site.podcast }}/{{ episode.episode_id }}/embed" width="100%" title="{{ episode.title }}"></iframe>
     </div>
   </div>

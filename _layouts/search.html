@@ -31,10 +31,15 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <!-- Loop over Search Results; for now just use epsiode list -->
-                {% include episodes-list-listing.html %}
-                <!-- end Loop -->
+              <div class="row my-5">
+                <div class="col-md-8">
+                  <!-- Loop over Search Results; for now just use epsiode list -->
+                  {% include episodes-list-listing.html %}
+                  <!-- end Loop -->
+                </div>
+                <div class="col-md-4">
+                  {% include listen-and-watch.html %}
+                </div>
               </div>
             </div
           </div>

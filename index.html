@@ -48,7 +48,7 @@ latest:
       </div>
     </div>
     <div class="row">
-      {% assign highlighted = site.episodes | where:"highlighted", true  %}
+      {% assign highlighted = site.episodes | where:"highlighted", true | reverse %}
       {% for episode in highlighted limit:3 %}
         {% include episode-card.html %}
       {% endfor %}
