@@ -1,10 +1,10 @@
 # Site settings
-title: Kubelets
+title: Podlets
 email:
-author: Kubelets Authors
+author: Podlets Authors
 description:
 url:
-logo: https://via.placeholder.com/200x80.png?text=Logo
+logo: podlets-logo.png
 vm_logo: vm-logo.png
 gh_repo: https://github.com/vmware/Kubelets/
 hero: 
@@ -16,7 +16,7 @@ footer:
   cta_url: /docs/master
   cta_text: Documentation
   vm-link: http://vmware.github.io/
-podcast: the-kubelets
+podcast: the-podlets
 footer_social_links:
   Twitter:
     fa_icon: fab fa-twitter
