@@ -4,13 +4,14 @@
   </div>
 </div>
 <div class="row thumbnail-grid mt-5">
-    {% for person in site.contributors %}
+{% for person in site.hosts %}
+  {% if person.current %}
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="media thumbnail-item">
-        <img src="{{ person.image }}" class="rounded-circle" alt="Person" />
+        <img src="{{ person.image }}" class="rounded-circle" alt="{{ person.first_name }} {{ person.last_name }}" />
         <div class="media-body align-self-center">
           <h6>{{ person.first_name }} {{ person.last_name }}</h6>
-          {{ person.content | markdownify }}
+          {{ person.jobtitle | markdownify }}
           {% if person.twitter or person.linkedin %}
           <div class="social-links">
             {% if person.twitter %}
@@ -24,5 +25,6 @@
         </div>
       </div>
     </div>
+  {% endif %}
 {% endfor %}
 </div>

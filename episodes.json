@@ -9,7 +9,7 @@ layout: none
       "number": {{ episode.episode_number }},
       "description": "{{ episode.description }}",
       "id": " {{ episode.episode_id }}",
-      "url": "{{ episode.url }}",
+      "url": "{{ episode.url }}"
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]

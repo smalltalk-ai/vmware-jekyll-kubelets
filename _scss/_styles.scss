@@ -12,12 +12,15 @@
 @import "./site/layouts/container";
 @import "./site/layouts/episode";
 @import "./site/layouts/about";
+@import "./site/layouts/default";
 
 // Objects
 @import "./site/objects/header";
 @import "./site/objects/footer";
 @import "./site/objects/section";
 @import "./site/objects/home-hero";
+@import "./site/objects/secondary-hero";
+@import "./site/objects/host-card";
 @import "./site/objects/card";
 @import "./site/objects/contributors";
 @import "./site/objects/collapse";
