@@ -1,18 +1,10 @@
 ---
 layout: default
 id: home
-backgrounds:
-  team: med-blue
 hero:
-  banner: /img/heroes/contour.svg
-  headline:  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  banner: /img/heroes/hero-podlets-home.svg
+  headline: The Podlets
   content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  cta_link1:
-    text: Lorem ipsum dolor
-    url: http://www.example.com?box1
-  cta_link2:
-    text: Lorem ipsum dolor sit amet
-    url: http://www.example.com?box1
 highlighted:
   headline: Highlighted Episodes
   introduction: These are the highlighted episodes
@@ -27,14 +19,16 @@ latest:
         <h1 class="mb-3">{{ page.hero.headline }}</h1>
         <p>{{ page.hero.content }}</p>
       </div>
+      {% if page.hero.cta_link1.url || page.hero.cta_link2.url %}
       <div class="hero-cta mt-4">
         <a href="{{ page.hero.cta_link1.url }}" class="btn btn-primary mb-3 mb-sm-0">{{ page.hero.cta_link1.text }}</a>
         <a href="{{ page.hero.cta_link2.url }}" class="btn btn-outline-light">{{ page.hero.cta_link2.text }}</a>
       </div>
+      {% endif %}
     </div>
   </div>
 </div> <!-- /home-hero -->
-
+{% include podcast-links.html %}
 <!-- Highlighted Episodes -->
 <div class="section section-card promo-cards">
   <div class="section-content">
@@ -44,7 +38,7 @@ latest:
         <p>{{ page.highlighted.introduction }}</p>
       </div>
       <div class="col-md-3 text-right">
-        <p><a href="{% link episodes.html %}">See All</a></p>
+        <p><a href="{% link episodes.html %}">See All Episodes</a></p>
       </div>
     </div>
     <div class="row">
@@ -77,8 +71,16 @@ latest:
   </div>
 </div>
 
-<div class="section section-background-{{ page.backgrounds.team }}">
-  <div class="section-content">
-    {% include contributors.html %}
+<div class="team-section-outer">
+  <div class="section section-contributors">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          {% include contributors.html %}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+{% include modal.html %}

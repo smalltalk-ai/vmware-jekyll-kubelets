@@ -36,3 +36,12 @@ h5 {
 strong {
   font-weight: $font-weight-semibold;
 }
+
+%eyebrow,
+.eyebrow {  
+  color: #9A9A9A;
+  font-size: 12px;
+  font-weight: $font-weight-medium;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
