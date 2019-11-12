@@ -79,7 +79,7 @@ defaults:
 collections:
   episodes:
     output: true
-  contributors:
+  hosts:
 
 # Build settings
 permalink: :title/

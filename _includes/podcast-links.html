@@ -6,17 +6,17 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-8 podcast-icons">        
-        <div class="row mb-3">
+      <div class="col-md-8 podcast-icons">
+        <div class="row mb-0 mb-md-3">
           {% for primary in site.podcast_links.primary %}
-          <div class="col-md-4 text-center">
+          <div class="col-md-4 mb-3 mb-md-0 text-center">
             <a href="{{primary.url}}" class="pill" target="_blank"><img src="/img/logos/{{primary.icon}}.png" alt="{{primary.alt}}"/></a>
           </div>
           {% endfor %}
         </div>
         <div class="row">
           {% for secondary in site.podcast_links.secondary %}
-          <div class="col-md-3 text-center">
+          <div class="col-md-3 mb-3 mb-md-0 text-center">
             <a href="{{secondary.url}}" class="pill" target="_blank"><img src="/img/logos/{{secondary.icon}}.png" alt="{{secondary.alt}}"/></a>
           </div>
           {% endfor %}

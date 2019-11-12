@@ -19,16 +19,22 @@ latest:
         <h1 class="mb-3">{{ page.hero.headline }}</h1>
         <p>{{ page.hero.content }}</p>
       </div>
-      {% if page.hero.cta_link1.url || page.hero.cta_link2.url %}
+      {% if page.hero.cta_link1.url or page.hero.cta_link2.url %}
       <div class="hero-cta mt-4">
+        {% if page.hero.cta_link1.url %}
         <a href="{{ page.hero.cta_link1.url }}" class="btn btn-primary mb-3 mb-sm-0">{{ page.hero.cta_link1.text }}</a>
-        <a href="{{ page.hero.cta_link2.url }}" class="btn btn-outline-light">{{ page.hero.cta_link2.text }}</a>
+        {% endif %}
+        {% if page.hero.cta_link2.url %}  
+          <a href="{{ page.hero.cta_link2.url }}" class="btn btn-outline-light">{{ page.hero.cta_link2.text }}</a>
+        {% endif %}
       </div>
       {% endif %}
     </div>
   </div>
 </div> <!-- /home-hero -->
-{% include podcast-links.html %}
+<div class="d-none d-md-block">
+  {% include podcast-links.html %}  
+</div>
 <!-- Highlighted Episodes -->
 <div class="section section-card promo-cards">
   <div class="section-content">
@@ -76,11 +82,13 @@ latest:
     <div class="container">
       <div class="row">
         <div class="col-md-10 offset-md-1">
-          {% include contributors.html %}
+          {% include hosts-home.html %}
         </div>
       </div>
     </div>
   </div>
 </div>
-
+<div class="d-block d-md-none">
+  {% include podcast-links.html %}  
+</div>
 {% include modal.html %}
