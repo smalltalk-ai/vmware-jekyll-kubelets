@@ -1,7 +1,6 @@
 .card {
   border-radius: 0;
   .card-body {
-    text-align: center;
     padding: 2rem 1.25rem;
   }
 
@@ -19,7 +18,7 @@
   &.card-light {
     a {
       color: $card-light-link;
-      font-weight: $font-weight-medium
+      font-weight: $font-weight-medium;
     }
     color: #777777;
     background-color: $card-light-background;
@@ -51,11 +50,34 @@
 }
 
 .episode-card {
+  .card-body {
+    padding: 20px;
+  }
+  h5 {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
   strong {
-    font-size: 12px;
+    @extend %eyebrow;
+    margin-bottom: 15px;
   }
   .card-description {
-    height: 160px;
     margin-bottom: 15px;
-  }  
+  }
+}
+
+a.play-episode {
+  font-size: 12px;
+  line-height: 30px;
+  color: #007CBB;
+  img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 9px;
+  }
+  &:hover {
+    opacity: .5;
+  }
 }

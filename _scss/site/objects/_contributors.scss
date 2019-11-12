@@ -1,0 +1,25 @@
+.team-section-outer {
+  background-color: $purple; 
+  background-image: linear-gradient(0deg, #21418C 0%, #7F35B2 100%);
+}
+.section-contributors {
+  h2 {
+    color: $white;
+  }
+  background-image: url('/img/contributors-bg-2.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  .social-links {
+    a {
+      display: inline-block;
+      margin-right: 12px;
+      img {
+        width: 27px;
+        height: 27px;
+      }
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+}

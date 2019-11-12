@@ -10,9 +10,9 @@ $light: $white;
 
 // Bootstrap overrides
 
-$body-bg: #bbb;
+$body-bg: #f7fbfc;
 $body-color: #3F3E3E;
-$box-shadow-sm: 0px 2px 4px 0px rgba(0,0,0,0.5);
+$box-shadow-sm: 0px 1px 10px 0px rgba(0,0,0,0.1);
 $border-color: #E8E8E8;
 
 $card-border-width: 1px;
@@ -39,14 +39,14 @@ $body-color-darkest: #111;
 
 // Container
 
-$container-background: $white;
+$container-background: $body-bg;
 $container-max-width: 1440px;
 
 // Header
 
 $header-background: $white;
-$header-foreground: #777;
-$header-foreground-selected: #777777;
+$header-foreground: #006990;
+$header-foreground-selected: #006990;
 
 // Footer
 $footer-foreground: #E8E8E8;
@@ -55,7 +55,7 @@ $footer-copyright: #777777;
 
 // Sections
 
-$section-content-max-width: 996px;
+$section-content-max-width: 1200px;
 $section-grey-background: #f2f2f2;
 
 $section-blue-background: #0165AB;
@@ -71,13 +71,29 @@ $card-dark-link-hover: $white;
 $card-light-background: $white;
 $card-light-link: $link-color;
 
+// bs overrides 
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: $section-content-max-width
+);
+
+
 // alternating cards
+$light-blue: #00C1D5;
+$med-blue: #0091DA;
+$dark-blue: #1D428A;
+$darkest-blue: #002538;
+$green: #78BE20;
+$purple: #7F35B2;
 $field-backgrounds: (
-  'light-blue': #00C1D5,
-  'med-blue': #0091DA,
-  'dark-blue': #1D428A,
-  'darkest-blue': #002538,
-  'green': #78BE20
+  'light-blue': $light-blue,
+  'med-blue': $med-blue,
+  'dark-blue': $dark-blue,
+  'darkest-blue': $darkest-blue,
+  'green': $green,
+  'purple': $purple,
 );
 
 @each $name, $hex in $field-backgrounds {
@@ -99,11 +115,11 @@ $field-backgrounds: (
 
 // Buttons
 
-$button-primary-background: $white;
-$button-primary-background-hover: #0091DA;
-$button-primary-foreground: #0091DA;
+$button-primary-background: #1D428A;
+$button-primary-background-hover: $white;
+$button-primary-foreground: $white;
 $button-primary-border: $button-primary-background;
-$button-primary-border-hover: $button-primary-background;
+$button-primary-border-hover: #1D428A;
 
 $button-secondary-background: #0091DA;
 $button-secondary-background-hover: $white;

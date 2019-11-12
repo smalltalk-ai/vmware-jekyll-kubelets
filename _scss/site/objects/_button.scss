@@ -2,11 +2,15 @@
   padding: {
     top: 13px;
     bottom: 9px;
+    left: 28px;
+    right: 28px;
   }
+  min-width: 137px;
   font-size: 0.75rem;
   border-radius: 5px;  
   text-transform: uppercase;
-  font-weight: $font-weight-bold;
+  letter-spacing: .02em;
+  font-weight: $font-weight-medium;
   &.btn-no-border {
     border-width: 0 !important;
   }

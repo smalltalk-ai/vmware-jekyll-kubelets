@@ -13,7 +13,7 @@
           {% endif %}
         </p>
       </div>
-      <iframe src="https://omny.fm/shows/{{ site.podcast }}/{{ episode.episode_id }}/embed" width="100%" title="{{ episode.title }}"></iframe>
+      <a href="#" data-toggle="modal" data-target="#playerModal" data-episode="{{ episode.episode_id }}" data-number="{{episode.episode_number}}" data-title="{{ episode.title }}" data-description="{{ episode.description }}" class="play-episode"><img src="/img/btn-play.svg" alt="">Play Episode</a>
     </div>
   </div>
 </div>

@@ -8,7 +8,7 @@ logo: podlets-logo.png
 vm_logo: vm-logo.png
 gh_repo: https://github.com/vmware/Kubelets/
 hero: 
-  background-color: dark-blue
+  background-color: white
 footer:
   title: Getting Started
   content: To help you get started, see the documentation.
@@ -27,6 +27,37 @@ footer_social_links:
   RSS:
     fa_icon: fa fa-rss
     url: feed.xml
+podcast_links:
+  primary:
+  - icon: youtube 
+    url: https://youtube.com/
+    alt: YouTube
+  - icon: itunes
+    url: https://itunes.com/
+    alt: iTunes
+  - icon: spotify
+    url: https://spotify.com/
+    alt: Spotify
+  secondary:
+  - icon: overcast
+    url: https://youtube.com
+    alt: Overcast
+  - icon: google-podcasts
+    url: https://itunes.com/
+    alt: Google Podcasts
+  - icon: android
+    url: https://spotify.com/
+    alt: Android
+  - icon: google-play
+    url: https://www.google.com/
+    alt: Google Play
+  tertiary: 
+  - icon: twitter-lg
+    url: https://www.twitter.com/
+    alt: Twitter
+  - icon: rss-lg
+    url: /feed.xml
+    alt: RSS
 
 defaults:
   - scope:
