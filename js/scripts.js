@@ -10,7 +10,7 @@
   
   /* MODAL */
   
-  $('#playerModal').on('shown.bs.modal', function (e) {
+  $('#playerModal').on('show.bs.modal', function (e) {
     var 
       $this = $('#playerModal'),
       $trigger = $(e.relatedTarget),
@@ -19,6 +19,7 @@
       description = $trigger.data('description'),
       title = 'Episode ' + $trigger.data('number')+': ' + $trigger.data('title')
     ;
+    
     if(episode) {
       $this.find('h5').html(title);
       $this.find('p.description').html(description);

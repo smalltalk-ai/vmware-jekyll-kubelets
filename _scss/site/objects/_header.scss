@@ -20,7 +20,34 @@
       }  
     }
   }
-
+  .site-name {
+    display: flex;
+    @include rem(18px);
+    @include media-breakpoint-up(md) {
+    @include rem(24px);
+    }
+    @include media-breakpoint-up(lg) {
+      @include rem(28px);
+    }
+    font-weight: $font-weight-light;
+    align-items: center;
+    a {
+      color: #717074;
+      text-decoration: none;    
+    }
+    letter-spacing: 0.5px;
+    .vmlogo {
+      max-width: 25%;
+      @include media-breakpoint-up(md) {
+        max-width: 90px;
+      }
+      @include media-breakpoint-up(lg) {
+        max-width: none;
+      }
+      display: inline-block;
+      margin-right: 22px;
+    }
+  }
   .logo {
     height: 45px;
     width: auto;

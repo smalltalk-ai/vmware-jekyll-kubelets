@@ -1,10 +1,11 @@
 h2[data-toggle="collapse"] {
-  svg {
-    transform: rotate(90deg);
+  i.carat {
+    display: inline-block;
+    transform: rotate(0deg);
   }
   &.collapsed {
-    svg {
-      transform: rotate(0deg);      
+    i.carat {
+      transform: rotate(180deg);
     }
   }
 }

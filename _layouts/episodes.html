@@ -9,15 +9,15 @@
       <div class="default-container">
         <div class="container">
           <div class="row">
-            <div class="col">
-              <h1>{{ page.title }}</h1>
-              <p>{{ page.introduction }}</p>
+            <div class="col-md-6">
+              <h1 class="mb-4">{{ page.title }}</h1>
+              <p class="b2">{{ page.description }}</p>
             </div>
           </div>
         </div>
         <div class="container py-5">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6" id="episode-info">
               
               <!-- VIDEO -->
               {% if page.video %}
@@ -53,11 +53,11 @@
               <!-- EPISODE NOTES -->
               {% if page.notes %}
               <div class="row justify-content-center">
-                <div class="col mb-3"><h2>Episode Notes</h2></div>
+                <div class="col mb-3"><h2 class="h3">Episode Notes</h2></div>
               </div>
               <div class="row justify-content-center">
                 <div class="col mb-5">
-                  {{ page.notes }}
+                  {{ page.notes | markdownify }}
                 </div>
               </div>
               {% endif %}
@@ -65,9 +65,9 @@
               <!-- TRANSCRIPT -->
               <div class="row justify-content-center">
                 <div class="col mb-3">
-                  <h2 data-toggle="collapse" class="collapsed" href="#transcriptPanel" role="button" aria-expanded="false" aria-controls="transcriptPanel">
+                  <h2 data-toggle="collapse" class="h3 color-dark-green collapsed" href="#transcriptPanel" role="button" aria-expanded="false" aria-controls="transcriptPanel">
                     Transcript
-                    <i class="fas fa-chevron-right fa-xs"></i>
+                    <i class="carat"><img src="/img/carat.svg" alt=""/></i>
                   </h2>
                 </div>
               </div>
@@ -78,7 +78,7 @@
               </div>
             </div>
             <div class="col-md-4 offset-md-1">
-              <h3>Related Episodes</h3>
+              <h2>Related Episodes</h2>
               {% for related in page.related %}
                 {% assign episode = site.episodes | where:"episode_id", related  | first %}
                 {% include episode-card-sidebar.html %}
@@ -87,11 +87,11 @@
           </div>
         </div>
         {% include podcast-links.html %}
+        {% include modal.html %}
       </div>
       {% include footer.html %}
     </div>
   </div>
-  {% include modal.html %}
 </body>
 
 </html>
