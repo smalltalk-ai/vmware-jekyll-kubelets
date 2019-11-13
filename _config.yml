@@ -93,6 +93,7 @@ collections:
   episodes:
     output: true
   hosts:
+    output: false
 
 # Build settings
 permalink: :title/
