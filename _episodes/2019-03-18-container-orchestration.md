@@ -5,7 +5,7 @@ title: Making Sense of Container Orchestration
 description: In this episode, we dive into the exciting world of container orchestration in Kubernetes.
 notes: Welcome to the second episode of The Kubelets Podcast! In this episode, we dive into the exciting world of container orchestration in Kubernetes. We have all heard about container orchestration, but to truly understand this concept, we have to first understand what containers are and why they started! From definitions of containers and how they fit into the bigger cloud landscape, down to the nitty-gritty’s of managing and scaling container orchestration; this episode gives you strong foundation to better understand the functions and impacts of container orchestration today. Container orchestration in Kubernetes is so popular today but it can be difficult to how whether container orchestration is right for you. These are just some of the questions and topics we get into today, and if you’re looking for a solid base to begin your container orchestration process or enquiry – this is the episode for you! 
 video: https://www.youtube.com/embed/dQw4w9WgXcQ
-related: 
+related: # appears in sidebar, no limit in related episodes. identify by `episode_id`
 - 001-cloud-native
 ---
 
