@@ -32,8 +32,11 @@
     font-weight: $font-weight-light;
     align-items: center;
     a {
-      color: #717074;
-      text-decoration: none;    
+      color: $brand-gray;
+      text-decoration: none;
+      &:hover {
+        color: $purple;
+      }
     }
     letter-spacing: 0.5px;
     .vmlogo {

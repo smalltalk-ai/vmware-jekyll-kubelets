@@ -47,8 +47,8 @@
             </div>
             <div class="col-md-4 offset-md-1">
               <h3>Highlighted Episodes</h3>
-              {% for highlighted in page.highlighted %}
-                {% assign episode = site.episodes | where:"episode_id", highlighted  | first %}
+              {% for highlighted in site.highlighted %}
+                {% assign episode = site.episodes | where:"episode_id", highlighted | first %}
                 {% include episode-card-sidebar.html %}
               {% endfor %}
             </div>
