@@ -37,6 +37,7 @@ latest:
   {% include podcast-links.html %}  
 </div>
 <!-- Highlighted Episodes -->
+{% if site.highlighted %}
 <div class="section section-card promo-cards">
   <div class="section-content">
     <div class="row">
@@ -51,13 +52,14 @@ latest:
       </div>
     </div>
     <div class="row">
-      {% assign highlighted = site.episodes | where:"highlighted", true | reverse %}
-      {% for episode in highlighted limit:3 %}
+      {% for highlighted in site.highlighted limit:3 %}
+        {% assign episode = site.episodes | where:"episode_id", highlighted | first %}
         {% include episode-card.html %}
       {% endfor %}
     </div>
   </div>
 </div>
+{% endif %}
 
 <!-- Latest Episodes -->
 <div class="section section-card promo-cards">
