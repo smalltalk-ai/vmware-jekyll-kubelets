@@ -22,9 +22,9 @@
     .hero-cta {       
       @include media-breakpoint-up(md) {
         @include make-col-ready();
-        @include make-col(8);
+        @include make-col(4);
         margin-top: 120px;
-      }  
+      }
     }
   }
 

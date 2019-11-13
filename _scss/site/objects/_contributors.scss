@@ -4,11 +4,28 @@
 }
 .section-contributors {
   h2 {
+    @include rem(36px);
+    font-weight: $font-weight-normal;
+    letter-spacing: 0;
+    line-height: 30px;
     color: $white;
   }
-  background-image: url('/img/contributors-bg-2.svg');
+  background-image: url('/img/hosts-bg-home.svg');
   background-repeat: no-repeat;
   background-position: top right;
+  background-size: contain;
+  .media-body {
+    h3 {
+      @include rem(16px);
+      $font-weight: $font-weight-normal;
+      line-height: 20px;
+    }
+    p {
+      @include rem(14px);
+      $font-weight: $font-weight-light;
+      line-height: 20px;
+    }
+  }
   .social-links {
     a {
       display: inline-block;

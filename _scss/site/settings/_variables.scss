@@ -9,7 +9,7 @@ $white: #fff;
 $light: $white;
 
 // Bootstrap overrides
-
+$base-font-size: 16px;
 $body-bg: #f7fbfc;
 $body-color: #3F3E3E;
 $box-shadow-sm: 0px 1px 10px 0px rgba(0,0,0,0.1);
@@ -85,13 +85,17 @@ $light-blue: #00C1D5;
 $med-blue: #0091DA;
 $dark-blue: #1D428A;
 $darkest-blue: #002538;
+$midnight-blue: #28333C;
 $green: #78BE20;
+$dark-green: #2B4352;
 $purple: #7F35B2;
 $field-backgrounds: (
   'light-blue': $light-blue,
   'med-blue': $med-blue,
   'dark-blue': $dark-blue,
   'darkest-blue': $darkest-blue,
+  'midnight-blue': $midnight-blue,
+  'dark-green': $dark-green,
   'green': $green,
   'purple': $purple,
 );
@@ -108,6 +112,9 @@ $field-backgrounds: (
   }
   .bg-color-#{$name} {
     background-color: #{$hex} !important;
+  }
+  .color-#{$name} {
+    color: #{$hex} !important;
   }
 }
 

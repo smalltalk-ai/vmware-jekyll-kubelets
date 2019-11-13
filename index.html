@@ -4,20 +4,21 @@ id: home
 hero:
   banner: /img/heroes/hero-podlets-home.svg
   headline: The Podlets
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  content: Exploring Cloud Native,<br/> one buzzword at a time!
 highlighted:
   headline: Highlighted Episodes
-  introduction: These are the highlighted episodes
 latest:
   headline: Latest Episodes
-  introduction: These are the latest episodes
 ---
 <div class="home-hero bg-color-{{ site.hero.background-color }}" style="background-image: url('{{ page.hero.banner }}')">
   <div class="section">
     <div class="section-content">
       <div class="hero-content">
-        <h1 class="mb-3">{{ page.hero.headline }}</h1>
-        <p>{{ page.hero.content }}</p>
+        <h1 class="mb-3">
+          <img src="/img/podlets-icon.png" alt=""/>
+          {{ page.hero.headline }}
+        </h1>
+        <p class="b2">{{ page.hero.content }}</p>
       </div>
       {% if page.hero.cta_link1.url or page.hero.cta_link2.url %}
       <div class="hero-cta mt-4">
@@ -40,11 +41,13 @@ latest:
   <div class="section-content">
     <div class="row">
       <div class="col-md-9">
-        <h1>{{ page.highlighted.headline }}</h1>
-        <p>{{ page.highlighted.introduction }}</p>
+        <h2>{{ page.highlighted.headline }}</h2>
+        {% if page.highlighted.introduction %}
+          <p>{{ page.highlighted.introduction }}</p>
+        {% endif %}
       </div>
       <div class="col-md-3 text-right">
-        <p><a href="{% link episodes.html %}">See All Episodes</a></p>
+        <p><a href="{% link episodes.html %}" class="eyebrow">View All Episodes</a></p>
       </div>
     </div>
     <div class="row">
@@ -61,11 +64,13 @@ latest:
   <div class="section-content">
     <div class="row">
       <div class="col-md-9">
-        <h1>{{ page.latest.headline }}</h1>
-        <p>{{ page.latest.introduction }}</p>
+        <h2>{{ page.latest.headline }}</h2>
+        {% if page.latest.introduction %}
+          <p>{{ page.latest.introduction }}</p>
+        {% endif %}
       </div>
       <div class="col-md-3 text-right">
-        <p><a href="{% link episodes.html %}">See All</a></p>
+        <p><a href="{% link episodes.html %}" class="eyebrow">View All Episodes</a></p>
       </div>
     </div>
     <div class="row">

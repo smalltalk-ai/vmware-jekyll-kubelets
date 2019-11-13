@@ -18,12 +18,18 @@ footer:
   vm-link: http://vmware.github.io/
 podcast: the-podlets
 footer_social_links:
+  Google Play:
+    fa_icon: -icon google-play
+    url: https://www.googleplay.xom
   Twitter:
     fa_icon: fab fa-twitter
-    url: https://example.com
-  Slack:
-    fa_icon: fab fa-slack
-    url: https://example.com
+    url: https://twitter.com/thepodlets
+  iTunes:
+    fa_icon: -icon itunes
+    url: https://itunes.com/
+  Spotify:
+    fa_icon: fab fa-spotify
+    url: https://spotify.com/
   RSS:
     fa_icon: fa fa-rss
     url: feed.xml
