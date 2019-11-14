@@ -93,6 +93,7 @@ collections:
   episodes:
     output: true
   hosts:
+    output: false
 
 # Build settings
 permalink: :title/
@@ -121,6 +122,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README-JEKYLL.md
+  - README-Podlets.md
   - LICENSE
   - CNAME
   - Runbook.docx
