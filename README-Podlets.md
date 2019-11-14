@@ -8,6 +8,7 @@ Episodes are a custom [collection](https://jekyllrb.com/docs/collections/) defin
 ## Episode Front Matter
 
 Each episode's `.md` file contains [Front Matter](https://jekyllrb.com/docs/front-matter/) for configuration in YAML format. This content appears between the `---` on each episode file.
+Note that any colons (`:`) in the Front Matter will need to be escaped by wrapping in single quotes, or replaced with another character.
 
 * `episode_id` - the ID for the episode. Utilized to reference specific episodes from other pages or episodes, and to launch the inline iframe player. 
 * `episode_number` - the number that appears on the front-end to users above the title (eg, `Episode 1`)
@@ -31,13 +32,17 @@ For the episode's transcript, which appears at length on the Episode detail page
 
 This is markdown format supported and will convert markdown tags into html upon compilation.
 
+## Latest episodes
+
+The home page will display the 3 latest episodes in reverse chronological order by default, starting with the latest.  To change this number, update the `limit` operator on `index.html`:
+
+` {% for episode in latest limit:3 %} <= limited to 3 currently `
 
 ## Highlighted Episodes
 
 The Home and About pages allow authors to set highlighted episodes. The home page will show up to three, but the About page will show as many highlighted episodes the author has specified.
 
 To select Featured episodes,add them to the `highlighted` YML block on `_config.yml`.
-
 
 # Podcast Hosts
 

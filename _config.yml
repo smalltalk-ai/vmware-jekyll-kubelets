@@ -122,6 +122,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README-JEKYLL.md
+  - README-Podlets.md
   - LICENSE
   - CNAME
   - Runbook.docx
