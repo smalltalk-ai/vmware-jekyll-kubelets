@@ -1,5 +1,5 @@
 ---
-episode_id: 004-why-api-contracts-are-important
+episode_id: 004-observability
 episode_number: 4
 title: Understanding Observability
 description: Observability - what the term means, how it relates to the process of software development, and the importance of investing in a culture of observability.
