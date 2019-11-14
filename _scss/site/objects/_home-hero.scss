@@ -23,7 +23,12 @@
       @include media-breakpoint-up(md) {
         @include make-col-ready();
         @include make-col(4);
-        margin-top: 120px;
+      }
+    }
+    .hero-content {
+      .badge {
+        max-width: 120px;
+        display: block;
       }
     }
   }
